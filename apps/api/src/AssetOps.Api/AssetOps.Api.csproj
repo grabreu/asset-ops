@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Scalar.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AssetOps.Infrastructure\AssetOps.Infrastructure.csproj" />
+    <ProjectReference Include="..\AssetOps.ServiceDefaults\AssetOps.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

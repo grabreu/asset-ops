@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+coverage/
+tests/
+global.json

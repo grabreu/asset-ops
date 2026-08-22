@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\AssetOps.Domain\AssetOps.Domain.csproj" />
+  </ItemGroup>
+</Project>

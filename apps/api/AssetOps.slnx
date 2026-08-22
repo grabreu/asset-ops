@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="aspire.config.json" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/AssetOps.Api/AssetOps.Api.csproj" />
+    <Project Path="src/AssetOps.AppHost/AssetOps.AppHost.csproj" />
+    <Project Path="src/AssetOps.Application/AssetOps.Application.csproj" Id="d44e57d9-a20f-4462-b7d4-82c3adfde900" />
+    <Project Path="src/AssetOps.Domain/AssetOps.Domain.csproj" Id="6243e008-62e7-4e77-9624-5c9e884653b1" />
+    <Project Path="src/AssetOps.Infrastructure/AssetOps.Infrastructure.csproj" Id="fb2cacf5-3760-44e1-8d23-e6f1cb497ecd" />
+    <Project Path="src/AssetOps.ServiceDefaults/AssetOps.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AssetOps.IntegrationTests/AssetOps.IntegrationTests.csproj" Id="939560d1-3dc3-4ee0-8efe-9605397ba14c" />
+    <Project Path="tests/AssetOps.UnitTests/AssetOps.UnitTests.csproj" Id="c0e6d622-1a55-465a-a7ff-850d49881a18" />
+  </Folder>
+</Solution>
