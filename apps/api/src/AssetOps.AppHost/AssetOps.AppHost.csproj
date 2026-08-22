@@ -1,0 +1,12 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.5.2">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>52bc4177-7996-448a-81c3-02914dcc6fed</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AssetOps.Api\AssetOps.Api.csproj" />
+  </ItemGroup>
+
+</Project>
