@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
     <File Path=".gitignore" />
     <File Path="aspire.config.json" />
     <File Path="Directory.Build.props" />
