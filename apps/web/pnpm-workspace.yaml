@@ -1,2 +1,4 @@
 allowBuilds:
   lightningcss: true
+overrides:
+  js-yaml: "^4.3.1"
