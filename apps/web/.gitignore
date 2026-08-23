@@ -2,3 +2,5 @@ node_modules/
 dist/
 coverage/
 .tanstack
+*.local
+openapi-ts-error-*.log
