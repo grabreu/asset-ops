@@ -267,7 +267,7 @@ jobs:
     needs: publish
     runs-on: ubuntu-latest
     environment:
-      name: prod-api
+      name: api-prod-brs
       url: https://ca-assetops-api-prod-brs.gentlecliff-429b9963.brazilsouth.azurecontainerapps.io/
 
     permissions:
