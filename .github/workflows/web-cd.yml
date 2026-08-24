@@ -161,7 +161,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: prod-web
+      name: web-prod-brs
       url: https://agreeable-rock-00992760f.7.azurestaticapps.net/
 
     steps:
