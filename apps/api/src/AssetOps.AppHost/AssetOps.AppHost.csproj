@@ -3,7 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <UserSecretsId>52bc4177-7996-448a-81c3-02914dcc6fed</UserSecretsId>
+    <AspireUseCliBundle>true</AspireUseCliBundle>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.SqlServer" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AssetOps.Api\AssetOps.Api.csproj" />

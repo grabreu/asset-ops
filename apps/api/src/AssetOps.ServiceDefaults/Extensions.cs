@@ -1,3 +1,4 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Http;
@@ -104,11 +105,15 @@ public static class Extensions
             options.GetLevel = GetRequestLoggingLevel;
         });
 
-        app.MapHealthChecks(HealthEndpointPath);
+        app.MapHealthChecks(HealthEndpointPath, new HealthCheckOptions
+        {
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
 
         app.MapHealthChecks(AlivenessEndpointPath, new HealthCheckOptions
         {
-            Predicate = r => r.Tags.Contains("live")
+            Predicate = r => r.Tags.Contains("live"),
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
         });
 
         return app;
