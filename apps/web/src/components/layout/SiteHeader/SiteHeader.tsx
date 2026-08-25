@@ -1,7 +1,7 @@
 import { Boxes, Plus } from "lucide-react";
-import { ModeToggle } from "@/components/theme/ModeToggle";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ModeToggle } from "@/components/ui/theme";
 
 export const SiteHeader = () => {
   return (
