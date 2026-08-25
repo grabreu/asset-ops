@@ -1,6 +1,7 @@
 using AssetOps.Api;
+using AssetOps.Infrastructure;
+using AssetOps.Infrastructure.Persistence;
 using AssetOps.ServiceDefaults;
-using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddOpenApi(options =>
         return Task.CompletedTask;
     });
 });
+
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -43,6 +46,8 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+await app.Services.InitializeDatabaseAsync();
 
 await app.RunAsync();
 

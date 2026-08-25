@@ -1,3 +1,12 @@
 global using System.Net;
+global using System.Text.Json;
+global using System.Text.Json.Serialization;
+global using Microsoft.AspNetCore.Hosting;
 global using Microsoft.AspNetCore.Mvc.Testing;
+global using Microsoft.Data.SqlClient;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Respawn;
+global using Testcontainers.MsSql;
 global using Xunit;
