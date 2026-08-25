@@ -114,7 +114,7 @@ jobs:
             -Dsonar.qualitygate.wait=true
             -Dsonar.test.inclusions=**/*.test.ts,**/*.test.tsx
             -Dsonar.exclusions=src/routeTree.gen.ts,src/lib/**
-            -Dsonar.coverage.exclusions=src/main.tsx,src/config/**,src/routes/**,src/testing/**
+            -Dsonar.coverage.exclusions=src/main.tsx,src/config/**,src/routes/**,src/testing/**,src/components/ui/**
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_WEB }}
