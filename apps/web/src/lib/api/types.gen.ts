@@ -3,26 +3,3 @@
 export type ClientOptions = {
     baseUrl: `${string}://${string}` | (string & {});
 };
-
-export type WeatherForecast = {
-    date: string;
-    temperatureC: number | string;
-    summary: null | string;
-    temperatureF?: number | string;
-};
-
-export type GetWeatherForecastData = {
-    body?: never;
-    path?: never;
-    query?: never;
-    url: '/weatherforecast';
-};
-
-export type GetWeatherForecastResponses = {
-    /**
-     * OK
-     */
-    200: Array<WeatherForecast>;
-};
-
-export type GetWeatherForecastResponse = GetWeatherForecastResponses[keyof GetWeatherForecastResponses];
