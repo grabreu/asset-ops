@@ -1,7 +1,7 @@
 using AssetOps.Domain.Assets;
 using AssetOps.Domain.Assets.Exceptions;
 
-namespace AssetOps.UnitTests.Assets;
+namespace AssetOps.UnitTests.Domain.Assets;
 
 public class AssetTests
 {

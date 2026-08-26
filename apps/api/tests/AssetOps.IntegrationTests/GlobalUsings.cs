@@ -1,4 +1,5 @@
 global using System.Net;
+global using System.Net.Http.Json;
 global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using Microsoft.AspNetCore.Hosting;
@@ -8,5 +9,6 @@ global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using Respawn;
+global using Shouldly;
 global using Testcontainers.MsSql;
 global using Xunit;

@@ -1,2 +1,8 @@
+global using ErrorOr;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Http.HttpResults;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using NSubstitute;
 global using Shouldly;
 global using Xunit;
