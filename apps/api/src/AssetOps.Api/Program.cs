@@ -1,4 +1,5 @@
 using AssetOps.Api.Endpoints.Assets;
+using AssetOps.Api.ExceptionHandling;
 using AssetOps.Application;
 using AssetOps.Infrastructure;
 using AssetOps.Infrastructure.Persistence;
@@ -15,6 +16,15 @@ builder.Services.AddOpenApi(options =>
         document.Servers = [];
         return Task.CompletedTask;
     });
+});
+
+builder.Services.AddExceptionHandler<DomainExceptionHandler>();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
@@ -36,6 +46,7 @@ var app = builder.Build();
 
 app.MapDefaultEndpoints();
 
+app.UseExceptionHandler();
 app.UseHttpsRedirection();
 app.UseCors();
 
