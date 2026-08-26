@@ -19,7 +19,7 @@ assignment history. No login, no external dependency beyond the database.
 - List assets - status dashboard, text search by name/tag, filter by
   status.
 - View asset detail - status, holder, full history.
-- Register asset.
+- Create asset.
 - Assign asset - fails if not available.
 - Return asset - fails if not in use.
 - Send asset to maintenance - fails if already in maintenance.
