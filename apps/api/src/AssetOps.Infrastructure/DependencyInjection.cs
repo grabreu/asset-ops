@@ -1,5 +1,7 @@
+using AssetOps.Application.Queries;
 using AssetOps.Domain.SeedWork;
 using AssetOps.Infrastructure.Persistence;
+using AssetOps.Infrastructure.Persistence.Queries;
 
 namespace AssetOps.Infrastructure;
 
@@ -16,6 +18,8 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
         services.AddScoped<ApplicationDbContextInitializer>();
+
+        services.AddScoped<IAssetQueries, AssetQueries>();
 
         return services;
     }
