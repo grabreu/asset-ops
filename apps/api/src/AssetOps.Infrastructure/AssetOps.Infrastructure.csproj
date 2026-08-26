@@ -6,4 +6,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AssetOps.Application\AssetOps.Application.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\Configurations\" />
+  </ItemGroup>
 </Project>

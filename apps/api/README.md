@@ -17,7 +17,6 @@ classDiagram
         Guid Id
         string Tag
         string Name
-        string Category
         AssetStatus Status
         string? CurrentHolder
         DateTimeOffset CreatedAt
@@ -26,7 +25,7 @@ classDiagram
     class AssetActivity {
         Guid Id
         Guid AssetId
-        ActivityType Type
+        AssetActivityType Type
         string? Holder
         DateTimeOffset OccurredAt
     }
@@ -37,9 +36,9 @@ classDiagram
         Maintenance
         Retired
     }
-    class ActivityType {
+    class AssetActivityType {
         <<enumeration>>
-        Registered
+        Created
         Assigned
         Returned
         SentToMaintenance
@@ -48,14 +47,14 @@ classDiagram
     }
     Asset "1" --> "*" AssetActivity
     Asset --> AssetStatus
-    AssetActivity --> ActivityType
+    AssetActivity --> AssetActivityType
 ```
 
 `AssetActivity` is append-only - it's the detail page's history list.
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Available: Register
+    [*] --> Available: Create
     Available --> InUse: Assign
     InUse --> Available: Return
     Available --> Maintenance: SendToMaintenance
