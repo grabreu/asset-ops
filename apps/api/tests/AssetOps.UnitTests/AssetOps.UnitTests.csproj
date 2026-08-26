@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\AssetOps.Api\AssetOps.Api.csproj" />
     <ProjectReference Include="..\..\src\AssetOps.Application\AssetOps.Application.csproj" />
   </ItemGroup>
 

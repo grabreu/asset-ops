@@ -32,7 +32,7 @@ public static class ErrorOrMinimalApiExtensions
         return Results.Problem(statusCode: statusCode, detail: error.Description);
     }
 
-    private static IResult ValidationProblem(List<Error> errors)
+    private static Microsoft.AspNetCore.Http.HttpResults.ValidationProblem ValidationProblem(List<Error> errors)
     {
         var errorsDictionary = errors
             .GroupBy(error => error.Code)
@@ -40,7 +40,7 @@ public static class ErrorOrMinimalApiExtensions
                 group => group.Key,
                 group => group.Select(error => error.Description).ToArray());
 
-        return Results.ValidationProblem(errorsDictionary);
+        return TypedResults.ValidationProblem(errorsDictionary);
     }
 
     public static IResult ToCreated<T>(this ErrorOr<T> result, Func<T, string> location)
