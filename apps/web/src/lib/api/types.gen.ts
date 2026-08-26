@@ -15,6 +15,30 @@ export type AssetSummaryDto = {
     createdAt: string;
 };
 
+export type CreateAssetRequest = {
+    tag: string;
+    name: string;
+};
+
+export type HttpValidationProblemDetails = {
+    type?: null | string;
+    title?: null | string;
+    status?: null | number | string;
+    detail?: null | string;
+    instance?: null | string;
+    errors?: {
+        [key: string]: Array<string>;
+    };
+};
+
+export type ProblemDetails = {
+    type?: null | string;
+    title?: null | string;
+    status?: null | number | string;
+    detail?: null | string;
+    instance?: null | string;
+};
+
 export type ListAssetsData = {
     body?: never;
     path?: never;
@@ -30,3 +54,32 @@ export type ListAssetsResponses = {
 };
 
 export type ListAssetsResponse = ListAssetsResponses[keyof ListAssetsResponses];
+
+export type CreateAssetData = {
+    body: CreateAssetRequest;
+    path?: never;
+    query?: never;
+    url: '/assets';
+};
+
+export type CreateAssetErrors = {
+    /**
+     * Bad Request
+     */
+    400: HttpValidationProblemDetails;
+    /**
+     * Conflict
+     */
+    409: ProblemDetails;
+};
+
+export type CreateAssetError = CreateAssetErrors[keyof CreateAssetErrors];
+
+export type CreateAssetResponses = {
+    /**
+     * Created
+     */
+    201: AssetSummaryDto;
+};
+
+export type CreateAssetResponse = CreateAssetResponses[keyof CreateAssetResponses];
