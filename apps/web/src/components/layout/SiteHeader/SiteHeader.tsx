@@ -1,6 +1,4 @@
-import { Boxes, Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Boxes } from "lucide-react";
 import { ModeToggle } from "@/components/ui/theme";
 
 export const SiteHeader = () => {
@@ -10,12 +8,7 @@ export const SiteHeader = () => {
         <Boxes className="size-5" />
         AssetOps
       </div>
-      <Input placeholder="Search by name/tag" className="max-w-xs" />
       <div className="flex-1" />
-      <Button size="sm">
-        <Plus data-icon="inline-start" />
-        New asset
-      </Button>
       <ModeToggle />
     </header>
   );
