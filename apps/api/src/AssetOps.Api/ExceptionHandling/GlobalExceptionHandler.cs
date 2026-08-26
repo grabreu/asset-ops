@@ -1,4 +1,4 @@
-﻿namespace AssetOps.Api.ExceptionHandling;
+namespace AssetOps.Api.ExceptionHandling;
 
 public sealed class GlobalExceptionHandler(
     ILogger<GlobalExceptionHandler> logger,
