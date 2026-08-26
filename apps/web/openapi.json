@@ -7,9 +7,7 @@
   "paths": {
     "/assets": {
       "post": {
-        "tags": [
-          "Assets"
-        ],
+        "tags": ["Assets"],
         "operationId": "CreateAsset",
         "requestBody": {
           "content": {
@@ -55,9 +53,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Assets"
-        ],
+        "tags": ["Assets"],
         "operationId": "ListAssets",
         "responses": {
           "200": {
@@ -80,12 +76,7 @@
   "components": {
     "schemas": {
       "AssetStatus": {
-        "enum": [
-          "Available",
-          "InUse",
-          "Maintenance",
-          "Retired"
-        ]
+        "enum": ["Available", "InUse", "Maintenance", "Retired"]
       },
       "AssetSummaryDto": {
         "required": [
@@ -112,10 +103,7 @@
             "$ref": "#/components/schemas/AssetStatus"
           },
           "currentHolder": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "createdAt": {
             "type": "string",
@@ -124,10 +112,7 @@
         }
       },
       "CreateAssetRequest": {
-        "required": [
-          "tag",
-          "name"
-        ],
+        "required": ["tag", "name"],
         "type": "object",
         "properties": {
           "tag": {
@@ -142,37 +127,21 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "title": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "status": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "null",
-              "integer",
-              "string"
-            ],
+            "type": ["null", "integer", "string"],
             "format": "int32"
           },
           "detail": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "instance": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "errors": {
             "type": "object",
@@ -189,37 +158,21 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "title": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "status": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "null",
-              "integer",
-              "string"
-            ],
+            "type": ["null", "integer", "string"],
             "format": "int32"
           },
           "detail": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           },
           "instance": {
-            "type": [
-              "null",
-              "string"
-            ]
+            "type": ["null", "string"]
           }
         }
       }
