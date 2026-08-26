@@ -2,7 +2,7 @@
 
 import type { Client, ClientMeta, Options as Options2, RequestResult, TDataShape } from './client';
 import { client } from './client.gen';
-import type { ListAssetsData, ListAssetsResponses } from './types.gen';
+import type { CreateAssetData, CreateAssetErrors, CreateAssetResponses, ListAssetsData, ListAssetsResponses } from './types.gen';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
@@ -19,3 +19,12 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
 };
 
 export const listAssets = <ThrowOnError extends boolean = false>(options?: Options<ListAssetsData, ThrowOnError>): RequestResult<ListAssetsResponses, unknown, ThrowOnError> => (options?.client ?? client).get<ListAssetsResponses, unknown, ThrowOnError>({ url: '/assets', ...options });
+
+export const createAsset = <ThrowOnError extends boolean = false>(options: Options<CreateAssetData, ThrowOnError>): RequestResult<CreateAssetResponses, CreateAssetErrors, ThrowOnError> => (options.client ?? client).post<CreateAssetResponses, CreateAssetErrors, ThrowOnError>({
+    url: '/assets',
+    ...options,
+    headers: {
+        'Content-Type': 'application/json',
+        ...options.headers
+    }
+});
