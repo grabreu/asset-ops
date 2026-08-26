@@ -3,3 +3,30 @@
 export type ClientOptions = {
     baseUrl: `${string}://${string}` | (string & {});
 };
+
+export type AssetStatus = 'Available' | 'InUse' | 'Maintenance' | 'Retired';
+
+export type AssetSummaryDto = {
+    id: string;
+    tag: string;
+    name: string;
+    status: AssetStatus;
+    currentHolder: null | string;
+    createdAt: string;
+};
+
+export type ListAssetsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/assets';
+};
+
+export type ListAssetsResponses = {
+    /**
+     * OK
+     */
+    200: Array<AssetSummaryDto>;
+};
+
+export type ListAssetsResponse = ListAssetsResponses[keyof ListAssetsResponses];
