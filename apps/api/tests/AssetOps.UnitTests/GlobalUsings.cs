@@ -1,4 +1,5 @@
 global using ErrorOr;
+global using FluentValidation.TestHelper;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Http.HttpResults;
 global using Microsoft.Extensions.Hosting;
